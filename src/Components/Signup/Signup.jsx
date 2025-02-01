@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 const Signup = () => {
     const router = useRouter();
-  // Validation Schema
+
   const schema = yup.object().shape({
     firstName: yup.string().required("First name is required"),
     lastName: yup.string().required("Last name is required"),
@@ -14,7 +14,7 @@ const Signup = () => {
     password: yup.string().required("Password is required").min(8, "Password must be at least 8 characters"),
   });
 
-  // Formik Hook
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
